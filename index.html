@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+             <!-- theme -->
+
+    <div id="theme-open" class="fas fa-bars"></div>
+
+    <div class="themes-container">
+
+        <div id="theme-close" class="fas fa-times"></div>
+
+        <h3>switch theme</h3>
+
+        <div class="theme-toggler">
+            <span>light</span>
+            <span class="toggler"></span>
+            <span>dark</span>
+        </div>
+
+        <h3>pick a color</h3>
+
+        <div class="theme-colors">
+            <div class="color" style="background:#2980b9"></div>
+            <div class="color" style="background:#27ae60;"></div>
+            <div class="color" style="background:#ffa502;"></div>
+            <div class="color" style="background:#8e44ad;"></div>
+            <div class="color" style="background:#0fb9b1;"></div>
+            <div class="color" style="background:#ffd32a;"></div>
+            <div class="color" style="background:#ff0033;"></div>
+            <div class="color" style="background:#e84393;"></div>
+        </div>
+
+    </div>
+
+    <!-- calculator -->
+
+    <h1>CALCULATOR</h1>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" placeholder="0" id="screen">
+            <button onclick="Clear()">Clr</button>
+            <button onclick="del()">Dlt</button>
+            <button onclick="display('%')">%</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('*')">*</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('-')">-</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="display('.')">.</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="Calculate()" class="equal">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

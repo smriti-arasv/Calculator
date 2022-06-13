@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+  --black:#444;
+  --bg:#ffffff;
+  --light-bg:#ecf0f3;
+  --light-color:#666;
+  --border:1px solid rgba(0,0,0,.1);
+	--dark: rgb(70,70,70);
+	--darker: rgba(0,0,0,.16);
+	--darkest: #111827;
+	--light: #EEE;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:.2s linear;
+  }
+  
+  body{
+    background:var(--light-bg);
+    
+  }
+  
+  body.active{
+    --dark:white;
+    --darker:rgba(255, 255, 255, 0.895);
+    --darkest:rgba(255, 255, 255, 0.895);
+    --light: black;
+    --black:#fff;
+    --bg:#262626;
+    --light-bg:#333;
+    --light-color:#eee;
+    --border:1px solid rgba(255,255,255,.1);
+    --box-shadow:0 5px 10px rgba(0,0,0,.3);
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--light-bg);
+    font-family: sans-serif;
+    outline: none;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ h1{
+    display: flex;
+    margin-top: 92px;
+    margin-bottom: -84px;
+    justify-content: center;
+    font-family: sans-serif;
+    color: var(--darkest);
+    text-shadow: 2px 2px 2px var(--darkest);
+}
+.calculator{
+    background-color:var(--light);
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px var(--bg),
+                      5px 5px 12px var(--darker);
+    display: grid;   
+    grid-template-columns: repeat(4,70px); 
+}
+input{
+    grid-column: span 4;
+    height: 60px;
+    width: 260px;
+    background-color:var(--light);
+    box-shadow: inset -5px -5px 12px var(--bg),
+                inset  5px 5px 12px var(--darker);
+    border: none; 
+    border-radius: 30px; 
+    color: var(--dark); 
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;   
+    padding: 20px;
+            
+}
+button{
+    height: 48px;
+    width: 48px;
+    background-color:var(--light);
+    box-shadow: -5px -5px 12px var(--bg),
+                 5px 5px 12px var(--darker);
+    border: none;
+    border-radius: 20px; 
+    color: var(--dark);
+    margin: 8px;
+    font-size: 20px;
+}
+.equal{
+    width: 115px;
+    border-radius: 40px;
+    background-color:var(--light);
+    box-shadow: -5px -5px 12px var(--bg),
+                 5px 5px 12px var(--darker);
+
+}
+  /* theme */
+  #theme-open{
+    position: fixed;
+    top:15px; right:20px;
+    font-size: 40px;
+    color:var(--black);
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .themes-container{
+    position:fixed;
+    top:0; right:-100%;
+    background:var(--bg);
+    border-left: var(--border);
+    height:100vh;
+    width:350px;
+    z-index: 1000;
+    text-align: right;
+    padding:20px;
+  }
+  
+  .themes-container.active{
+    right:0;
+  }
+  
+  .themes-container #theme-close{
+    font-size: 40px;
+    color:var(--black);
+    cursor: pointer;
+  }
+  
+  .themes-container h3{
+    text-align: center;
+    color:var(--black);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    padding:15px 0;
+    margin:20px 0;
+  }
+  
+  .themes-container .theme-toggler{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .themes-container .theme-toggler span{
+    color:var(--light-color);
+  }
+  
+  .themes-container .theme-toggler .toggler{
+    height:40px;
+    width:100px;
+    border-radius: 50px;
+    background:var(--light-bg);
+    position: relative;
+    cursor: pointer;
+    border:var(--border);
+    margin:0 10px;
+  }
+  
+  .themes-container .theme-toggler .toggler::before{
+    content:'';
+    position: absolute;
+    top:5px; left:5px;
+    height:28px;
+    width:28px;
+    border-radius: 50%;
+    background:#fff;
+    transition:.2s linear;
+  }
+  
+  .themes-container .theme-toggler.active .toggler::before{
+    left:65px;
+  }
+  
+  .themes-container .theme-colors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:15px;
+  }
+  
+  .themes-container .theme-colors .color{
+    border-radius: 5px;
+    height:50px;
+    width:50px;
+    cursor: pointer;
+  }
+  
+  .themes-container .theme-colors .color:hover{
+    opacity: .5;
+  }
+  
